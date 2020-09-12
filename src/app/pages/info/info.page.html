@@ -1,0 +1,80 @@
+<ion-content>
+  <ion-header> </ion-header>
+
+  <ion-content>
+    <ion-grid class="container">
+      <ion-row>
+        <ion-col class="logo-container">
+          <img
+            src="./../../../assets/images/logo/logo.png"
+            alt="logo"
+            class="logo"
+          />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="para">
+          <p>Please provide the following information for accurate feedback</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <form (ngSubmit)="onSubmit()" >
+          <ion-item>
+            <ion-label position="stacked">Zip</ion-label>
+            <ion-input placeholder="22313"></ion-input>
+            <ion-icon name="location-outline"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Height (cm)</ion-label>
+            <ion-input type="number" placeholder="170"></ion-input>
+            <ion-icon name="man-outline"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Weight</ion-label>
+            <ion-input type="number" placeholder="70"></ion-input>
+            <ion-icon name="body-outline"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Age</ion-label>
+            <ion-input type="number" placeholder="35"></ion-input>
+            <ion-icon name="calendar-outline"></ion-icon>
+
+          </ion-item>
+          <ion-list>
+            <ion-item>
+              <ion-label position="stacked">Gender</ion-label>
+              <ion-select placeholder="Select One" appNoArrow style="padding-right: 20px;">
+                <ion-select-option value="female">Female</ion-select-option>
+                <ion-select-option value="male">Male</ion-select-option>
+                <ion-select-option value="other">Other</ion-select-option>
+              </ion-select>
+            <ion-icon name="male-female-outline"></ion-icon>
+
+            </ion-item>
+          </ion-list>
+
+          <div>
+            <ion-button type="submit" expand="block" class="button">Finish</ion-button>
+          </div>
+        </form>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="or">or</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="social-logins">
+          <ion-icon name="logo-google"></ion-icon>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="text-center" style="margin-top: auto">
+          Already have an account? <a href="/login">login</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>

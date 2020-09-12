@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="gray">
+    <h3 class="title center">Settings</h3>
+
+    <section class="profile white">
+      <div class="row">
+        <div class="image-container">
+          <img src="./../../../assets/images/placeholders/profile_pic.jpg" alt="profile_pic">
+        </div>
+        <div class="text">
+          <h3 class="title">John Doe</h3>
+          <small>johndoe@example.com</small>
+        </div>
+      </div>
+    </section>
+    <section class="options">
+      <ion-list class="option-list">
+        <ion-item [routerLink]="['/profile']" routerDirection="forword">
+          <ion-icon name="person-outline"></ion-icon>
+          Accounts
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="notifications-outline"></ion-icon>
+          Notifications
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="ribbon-outline"></ion-icon>
+          Membership
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="help-outline"></ion-icon>
+          FAQ
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="information-circle-outline"></ion-icon>
+          About
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="exit-outline"></ion-icon>
+          Logout
+        </ion-item>
+      </ion-list>
+    </section>
+  </div>
+</ion-content>

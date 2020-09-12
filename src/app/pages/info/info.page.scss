@@ -1,0 +1,66 @@
+.container {
+  margin-top: 10px;
+}
+
+.para {
+  text-align: center;
+}
+
+.logo-container {
+  text-align: center;
+
+  .logo {
+    width: 200px;
+    margin-top: 30px;
+  }
+}
+
+.heading-section {
+  margin: 20px 0px;
+
+  h2 {
+    font-size: 30px;
+    margin: 0px;
+  }
+}
+
+form {
+  width: 100%;
+  text-align: center;
+
+  .forgot {
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  ion-button {
+    margin-top: 10px;
+  }
+
+
+  ion-input {
+    padding-right: 25px !important;
+  }
+
+  ion-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    color: var(--ion-color-primary);
+  }
+}
+
+.or {
+  text-align: center;
+  font-size: 1.6em;
+  margin: 15px;
+}
+
+.social-logins {
+  text-align: center;
+  font-size: 2em;
+
+  ion-icon {
+    margin: 6px;
+  }
+}

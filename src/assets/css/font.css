@@ -1,0 +1,35 @@
+//  import fonts
+
+@font-face {
+  font-family: "Montserract";
+  src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserract";
+  src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Montserract";
+  src: url("./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("./assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("./assets/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("./assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
+  font-weight: bold;
+}
