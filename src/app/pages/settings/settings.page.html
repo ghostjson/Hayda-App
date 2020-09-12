@@ -1,6 +1,10 @@
 <ion-content>
+
+
+  <app-header [back]="false" name="Settings"></app-header>
+
   <div class="gray">
-    <h3 class="title center">Settings</h3>
+    <!-- <h3 class="title center">Settings</h3> -->
 
     <section class="profile white">
       <div class="row">
@@ -15,7 +19,7 @@
     </section>
     <section class="options">
       <ion-list class="option-list">
-        <ion-item [routerLink]="['/profile']" routerDirection="forword">
+        <ion-item [routerLink]="['/main/settings/profile']" [routerDirection]="'forword'">
           <ion-icon name="person-outline"></ion-icon>
           Accounts
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
@@ -40,7 +44,7 @@
           About
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
         </ion-item>
-        <ion-item>
+        <ion-item [routerLink]="['/login']">
           <ion-icon name="exit-outline"></ion-icon>
           Logout
         </ion-item>
