@@ -7,14 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-
   @Input('name') name: string;
-  @Input('back') back: boolean;
+  @Input('url') url: string;
+
+  back: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    
+    this.back = this.url !== undefined;
     console.log(this.back);
+    
   }
 
 }

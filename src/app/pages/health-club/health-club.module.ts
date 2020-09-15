@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { HealthClubPageRoutingModule } from './health-club-routing.module';
 
 import { HealthClubPage } from './health-club.page';
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { LinkCardComponent } from 'src/app/components/link-card/link-card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { HealthClubPage } from './health-club.page';
     IonicModule,
     HealthClubPageRoutingModule
   ],
-  declarations: [HealthClubPage]
+  declarations: [HealthClubPage, HeaderComponent, LinkCardComponent]
 })
 export class HealthClubPageModule {}

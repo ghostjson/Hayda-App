@@ -1,3 +1,80 @@
+<app-header name="Health Club"></app-header>
+
 <ion-content>
-  <h2>Health Club</h2>
+  <ion-grid style="margin-left: 10px;margin-bottom: 80px;">
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Body Health</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="body_health"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Brain Health</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="brain_health"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Heart Health</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="heart_health"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Insure Health</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="insure_health"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Mental Health</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="mental_health"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="12">
+        <h6 class="title">Wealth Tips</h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <app-link-card [contents]="wealth_tips"></app-link-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>

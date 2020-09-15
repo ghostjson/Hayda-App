@@ -1,0 +1,16 @@
+.link-card {
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  .title {
+    color: white;
+    font-size: 0.8em;
+  }
+}
