@@ -1,0 +1,28 @@
+ion-card{
+  ion-card-header{
+    padding: 8px;
+    h4{
+      margin: 5px;
+    }
+    ion-icon{
+      font-size: 1.8em;
+      position: absolute;
+      right: 10px;
+      top: 13px;
+      transition: 0.8s;
+
+      &.active{
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .faq-content.hide{
+    height: 0px;
+    padding: 0px;
+  }
+  .faq-content.show{
+    height: auto;
+    padding: 16px 13px;
+  }
+}

@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let faq of faqs; index as i" (click)="faqClick(i)">
+          <ion-card-header>
+            <h4>{{ faq.heading }}</h4>
+            <ion-icon class="arrow-icon" [ngClass]="activeIcon(i)" name="chevron-forward-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content *ngIf="current === i" class="faq-content">
+            {{ faq.content }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,63 @@
+.profile {
+  .row {
+    display: flex;
+    background-color: white;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .image-container {
+      width: 20vw;
+      img {
+        border-radius: 100%;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        text-align: center;
+    //   padding-left: 20px;
+
+      h3 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 1.2em;
+      }
+
+      small {
+        font-weight: 600;
+        color: gray;
+      }
+    }
+  }
+}
+
+
+form {
+  width: 100%;
+  text-align: center;
+
+  .forgot {
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  ion-button {
+    margin-top: 10px;
+  }
+
+
+  ion-input {
+    padding-right: 25px !important;
+  }
+
+  ion-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    color: var(--ion-color-primary);
+  }
+}

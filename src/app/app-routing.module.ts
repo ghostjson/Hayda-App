@@ -46,6 +46,14 @@ const routes: Routes = [
         (m) => m.NotificationsPageModule
       ),
   },
+  {
+    path: 'main/settings/faq',
+    loadChildren: () => import('./pages/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'main/settings/about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
 ];
 
 @NgModule({

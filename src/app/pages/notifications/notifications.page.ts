@@ -12,4 +12,7 @@ export class NotificationsPage implements OnInit {
   ngOnInit() {
   }
 
+    delete(item: any) {
+        console.log(item);
+    }
 }
