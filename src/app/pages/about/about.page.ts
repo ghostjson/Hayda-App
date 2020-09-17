@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
+  current_tab: string = 'who';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+    tabChanged($event: any) {
+        this.current_tab = $event.detail.value;
+    }
+
+    isTab(tab_name: string){
+      return this.current_tab === tab_name;
+    }
+
+  swipeLeft() {
+    console.log('swipe_left');
+  }
 }

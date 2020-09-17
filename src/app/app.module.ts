@@ -9,6 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from "@angular/platform-browser";
+import * as Hammer from 'hammerjs';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    // { provide: HammerGestureConfig, useClass: CustomerHammerConfig}
   ],
   bootstrap: [AppComponent]
 })

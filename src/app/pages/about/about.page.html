@@ -1,9 +1,128 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>about</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>About</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+    <ion-grid >
+        <ion-row>
+            <ion-col class="logo-container">
+                <img
+                        src="./../../../assets/images/logo/logo.png"
+                        alt="logo"
+                        class="logo"
+                />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
 
+                <div>
+                    <ion-segment scrollable (ionChange)="tabChanged($event)" value="who">
+                        <ion-segment-button value="who">
+                            <ion-label>Who is Hayda?</ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="vision">
+                            <ion-label>Vision</ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="mission">
+                            <ion-label>Mission</ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="team">
+                            <ion-label>Team</ion-label>
+                        </ion-segment-button>
+                        <ion-segment-button value="board">
+                            <ion-label>Advisory Board</ion-label>
+                        </ion-segment-button>
+                    </ion-segment>
+
+                </div>
+
+                <div class="content">
+                    <section *ngIf="isTab('who')">
+                        <h3>WHO IS HAYDA?</h3>
+                        <p>HAYDA, headquartered at Rancho Cucamonga, California is a creative mobile application and
+                            webpage that helps Uninsured Young Adults (UYA) 19-34 years who do not have access to
+                            preventive health care to take ownership of their health to decrease risks for diseases like
+                            a stroke, diabetes, and hypertension.
+                        </p>
+                        <p>
+                            Preventable diseases like a stroke, diabetes, and
+                            hypertension are on the rise in this group according to research, so HAYDA’s purpose is to
+                            disrupt this pattern with a convenient, cost-efficient, and collated educational information
+                            that is imbedded in the app with the option of video conferencing with a health coach or
+                            health navigator.
+                        </p>
+                        <p>
+                            It’s a unique platform that provides easy access to routine health care
+                            information and resource similar to what they would receive at a clinic visit with a primary
+                            health care provider.
+                        </p>
+                        <p>
+                            HAYDA will offer a wide variety of healthy lifestyle recommendation from the health
+                            industry’s most trustworthy organization, experts, top-rated lifestyle sources to educate,
+                            empower, and engage UYA in preventive health lifestyle. The core information will focus on
+                            controlling weight, blood pressure, and blood glucose. Recommendation include:
+                        </p>
+                        <ul style="padding-left: 15px">
+                            <li>Fitness</li>
+                            <li>Nutrition</li>
+                            <li>Blood Pressure</li>
+                            <li>Weight</li>
+                            <li>Blood Glucose</li>
+                            <li>Mindfulness</li>
+                        </ul>
+
+                        <p>
+                            HAYDA is led by Linda Dankwa, a Registered Nurse who has been in the healthcare industry for
+                            30 years, with an MBA focusing on Healthcare Management, and a Doctorate in Social Work with
+                            an emphasis in social innovation. Linda Dankwa has an in-depth knowledge of preventive
+                            health lifestyle demands as well as the needs of Uninsured Young Adults (UYA).
+                        </p>
+
+                        <p>
+                            The team includes the Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief
+                            Information Officer (CIO), Marketer, Content Manager, and a Health Coach. The team’s goals
+                            will consist of strategic development for mobile app focusing on preventive health
+                            lifestyle, day-to-day operations, and business management.
+                        </p>
+                        <p>
+                            It was apparent to Linda Dankwa that uninsured young adults were showing an increase in the
+                            rate of preventable diseases, and an unserved market need existed for this product catering
+                            to preventive health lifestyle. Furthermore, after researching the market and literature,
+                            this theory was proven. This product caters to Uninsured Young Adults (UYA) ages 19-34, but
+                            it will be useful for anyone interested in health promotion.
+                        </p>
+                    </section>
+                    <section *ngIf="isTab('vision')">
+                        <h3>Vision for HAYDA</h3>
+                        <p>
+                            We Aim to Educate, Encourage, Engage, and Empower Uninsured Young Adults to Embrace
+                            Preventive Health Lifestyle to promote Longevity in our Communities.
+                        </p>
+                    </section>
+                    <section *ngIf="isTab('mission')">
+                        <h3>Mission for HAYDA</h3>
+                        <p>
+                            Through the Use of Mobile Health and Medical Technology Applications, Uninsured Young Adults
+                            Will Have Access to Aggregated Health Information and Resources on a Platform that
+                            Incorporates Their Preferences and Goals to Provide Meaningful Feedback and Suggestions to
+                            Engage them in Preventive Health Lifestyle.
+                        </p>
+                    </section>
+                    <section *ngIf="isTab('team')">
+                        <h3>MEET OUR TEAM</h3>
+                    </section>
+                    <section *ngIf="isTab('board')">
+                        <h3>ADVISORY BOARD</h3>
+                    </section>
+                </div>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
