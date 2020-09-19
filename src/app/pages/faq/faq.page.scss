@@ -3,6 +3,10 @@ ion-card{
     padding: 8px;
     h4{
       margin: 5px;
+
+      &.faq-heading{
+        font-size: 1em;
+      }
     }
     ion-icon{
       font-size: 1.8em;

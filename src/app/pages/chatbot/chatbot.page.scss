@@ -1,0 +1,45 @@
+
+.message-section {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 56px;
+  justify-content: flex-end;
+
+
+  .message-lists {
+    color: white;
+    overflow: scroll;
+
+    .message{
+      width: 75vw;
+      padding: 8px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 0.9em;
+
+    }
+
+    .comp {
+      background-color: var(--ion-color-primary);
+      border-top-left-radius: 0;
+      margin-left: 3px;
+    }
+
+    .user {
+      background-color: var(--ion-color-dark);
+      margin-left: auto;
+      border-top-right-radius: 0;
+      margin-right: 3px;
+    }
+  }
+
+  .message-box {
+    width: 100%;
+
+    ion-item {
+      border-top: 1px solid lightgray;
+    }
+  }
+}

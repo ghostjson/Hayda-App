@@ -21,7 +21,7 @@ export class LinkCardComponent implements OnInit {
   }
 
   cardClick(url: string): void{
-    
+    window.open(url, '_system', 'location=yes');
   }
 
 }

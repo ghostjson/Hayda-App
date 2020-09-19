@@ -14,7 +14,7 @@
       <ion-col>
         <ion-card *ngFor="let faq of faqs; index as i" (click)="faqClick(i)">
           <ion-card-header>
-            <h4>{{ faq.heading }}</h4>
+            <h4 class="faq-heading">{{ faq.heading }}</h4>
             <ion-icon class="arrow-icon" [ngClass]="activeIcon(i)" name="chevron-forward-outline"></ion-icon>
           </ion-card-header>
           <ion-card-content *ngIf="current === i" class="faq-content">

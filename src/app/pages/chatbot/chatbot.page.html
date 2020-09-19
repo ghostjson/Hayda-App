@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Chatbot</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="message-section">
+        <section #messagesSection [scrollTop]="messagesSection.scrollHeight" class="message-lists">
+            <div class="message" [ngClass]="message.author" *ngFor="let message of messages;index as i">
+                <div class="message-content">
+                    {{ message.content }}
+                </div>
+            </div>
+        </section>
+        <section class="message-box">
+            <ion-item>
+                <ion-icon name="send" slot="end"></ion-icon>
+                <ion-input enterkeyhint="done" placeholder="Enter message" autofocus="true"
+                           clear-input="true"></ion-input>
+            </ion-item>
+        </section>
+    </div>
+</ion-content>

@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-tab-bar',
-  templateUrl: './tab-bar.component.html',
-  styleUrls: ['./tab-bar.component.scss'],
+    selector: 'app-tab-bar',
+    templateUrl: './tab-bar.component.html',
+    styleUrls: ['./tab-bar.component.scss'],
 })
 export class TabBarComponent implements OnInit {
 
-  constructor() { }
+    constructor(private router: Router) {
+    }
 
-  ngOnInit() {}
+    ngOnInit() {
+    }
 
+    openChatBot() {
+      this.router.navigate(['/main/chatbot']);
+    }
 }
