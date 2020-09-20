@@ -58,6 +58,14 @@ const routes: Routes = [
     path: 'main/settings/membership',
     loadChildren: () => import('./pages/memberships/memberships.module').then( m => m.MembershipsPageModule)
   },
+  {
+    path: 'workout',
+    loadChildren: () => import('./pages/workout/workout.module').then( m => m.WorkoutPageModule)
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./pages/blog/blog.module').then( m => m.BlogPageModule)
+  },
 ];
 
 @NgModule({

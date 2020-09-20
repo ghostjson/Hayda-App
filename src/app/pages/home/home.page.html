@@ -1,3 +1,39 @@
 <ion-content [fullscreen]="true">
-  <h2>Hello</h2>
+
+  <ion-grid class="landing-head">
+    <ion-row style="height: 80%;">
+      <ion-col class="landing-logo-container">
+        <img src="./../../../assets/images/logo/logo-white.png" class="landing-logo">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="goToWorkout()">
+          <div class="workout-section">
+            <div>
+              <h2 style="margin: 0">Today's</h2>
+              <h3 style="margin: 0">Workout</h3>
+            </div>
+            <div>
+              <img src="./../../../assets/images/home/workout.svg" class="workout-image">
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="blog-heading">
+          <h3>Blog</h3>
+          <a (click)="goToBlog()">See more</a>
+        </ion-row>
+        <ion-row></ion-row>
+        <app-link-card [contents]="blogs"></app-link-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
