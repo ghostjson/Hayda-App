@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-info',
-  templateUrl: './info.page.html',
-  styleUrls: ['./info.page.scss'],
+    selector: 'app-info',
+    templateUrl: './info.page.html',
+    styleUrls: ['./info.page.scss'],
 })
 export class InfoPage implements OnInit {
+    public gender: string = '';
 
-  constructor(private router: Router) { }
+    constructor(private router: Router) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  onSubmit() : void
-  {
-    this.router.navigate(['/home']);
-  }
+    async onSubmit(): Promise<void> {
+        await this.router.navigate(['/home']);
+    }
 
+    genderChange() {
+        console.log(this.gender)
+    }
 }

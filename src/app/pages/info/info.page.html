@@ -20,30 +20,29 @@
       <ion-row>
         <form (ngSubmit)="onSubmit()" >
           <ion-item>
-            <ion-label position="stacked">Zip</ion-label>
+            <ion-label position="stacked">Zipcode</ion-label>
             <ion-input placeholder="22313"></ion-input>
             <ion-icon name="location-outline"></ion-icon>
           </ion-item>
           <ion-item>
-            <ion-label position="stacked">Height (cm)</ion-label>
-            <ion-input type="number" placeholder="170"></ion-input>
+            <ion-label position="stacked">Height (inches)</ion-label>
+            <ion-input type="number" placeholder="64"></ion-input>
             <ion-icon name="man-outline"></ion-icon>
           </ion-item>
           <ion-item>
-            <ion-label position="stacked">Weight</ion-label>
-            <ion-input type="number" placeholder="70"></ion-input>
+            <ion-label position="stacked">Weight (pounds)</ion-label>
+            <ion-input type="number" placeholder="160"></ion-input>
             <ion-icon name="body-outline"></ion-icon>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Age</ion-label>
             <ion-input type="number" placeholder="35"></ion-input>
             <ion-icon name="calendar-outline"></ion-icon>
-
           </ion-item>
           <ion-list>
             <ion-item>
               <ion-label position="stacked">Gender</ion-label>
-              <ion-select placeholder="Select One" appNoArrow style="padding-right: 20px;">
+              <ion-select placeholder="Select One" [(ngModel)]="gender" name="gender" (ionChange)="genderChange()" style="padding-right: 20px;">
                 <ion-select-option value="female">Female</ion-select-option>
                 <ion-select-option value="male">Male</ion-select-option>
                 <ion-select-option value="other">Other</ion-select-option>
@@ -52,6 +51,11 @@
 
             </ion-item>
           </ion-list>
+
+          <ion-item *ngIf="gender === 'other'">
+            <ion-label position="stacked">Type your gender</ion-label>
+            <ion-input type="number" placeholder=""></ion-input>
+          </ion-item>
 
           <div>
             <ion-button type="submit" expand="block" class="button">Finish</ion-button>

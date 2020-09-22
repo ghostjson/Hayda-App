@@ -16,47 +16,7 @@ export class ChatbotPage implements OnInit {
     this.messages = [
       {
         author: 'comp',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'comp',
-        content: 'Lorem'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
-      },
-      {
-        author: 'user',
-        content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 150'
+        content: 'Hi imJohn, this is HAYDA Bot and I am here to assist you.  How can I help?'
       }
     ];
   }
