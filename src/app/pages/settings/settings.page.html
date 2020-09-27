@@ -5,14 +5,16 @@
 </ion-header>
 
 <ion-content>
-
   <div class="gray">
     <!-- <h3 class="title center">Settings</h3> -->
 
     <section class="profile white">
       <div class="row">
         <div class="image-container">
-          <img src="./../../../assets/images/placeholders/profile_pic.jpg" alt="profile_pic">
+          <img
+            src="./../../../assets/images/placeholders/profile_pic.jpg"
+            alt="profile_pic"
+          />
         </div>
         <div class="text">
           <h3 class="title">John Doe</h3>
@@ -22,27 +24,42 @@
     </section>
     <section class="options">
       <ion-list class="option-list">
-        <ion-item [routerLink]="['/main/settings/profile']" [routerDirection]="'forward'">
+        <ion-item
+          [routerLink]="['/main/settings/profile']"
+          [routerDirection]="'forward'"
+        >
           <ion-icon name="person-outline"></ion-icon>
-          Accounts
+          Account
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
         </ion-item>
-        <ion-item  [routerLink]="['/main/settings/notifications']" [routerDirection]="'forward'">
+        <ion-item
+          [routerLink]="['/main/settings/notifications']"
+          [routerDirection]="'forward'"
+        >
           <ion-icon name="notifications-outline"></ion-icon>
           Notifications
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
         </ion-item>
-        <ion-item  [routerLink]="['/main/settings/membership']" [routerDirection]="'forward'">
+        <ion-item
+          [routerLink]="['/main/settings/membership']"
+          [routerDirection]="'forward'"
+        >
           <ion-icon name="ribbon-outline"></ion-icon>
           Membership
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
         </ion-item>
-        <ion-item  [routerLink]="['/main/settings/faq']" [routerDirection]="'forward'">
+        <ion-item
+          [routerLink]="['/main/settings/faq']"
+          [routerDirection]="'forward'"
+        >
           <ion-icon name="help-outline"></ion-icon>
           FAQ
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
         </ion-item>
-        <ion-item  [routerLink]="['/main/settings/about']" [routerDirection]="'forward'">
+        <ion-item
+          [routerLink]="['/main/settings/about']"
+          [routerDirection]="'forward'"
+        >
           <ion-icon name="information-circle-outline"></ion-icon>
           About
           <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
