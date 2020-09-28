@@ -1,34 +1,29 @@
-.landing-head{
+.landing-head {
   background-color: var(--ion-color-primary);
   height: 20vh;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom: 25vh;
+  margin-bottom: 2vh;
 
-  .landing-logo-container{
-
-
+  .landing-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    .landing-logo{
+    .landing-logo {
       width: 150px;
     }
   }
 
-  .workout-section{
+  .workout-section {
     display: flex;
     justify-content: space-between;
     padding: 4vw;
     align-items: center;
 
-    .workout-image{
+    .workout-image {
       width: 150px;
     }
   }
-
-
-
 }
 
 #container {
@@ -59,12 +54,13 @@
   text-decoration: none;
 }
 
-.blog-heading{
+.blog-heading {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7px;
 
-  h3,a{
+  h3,
+  a {
     margin: 0px;
     padding: 0px;
   }
