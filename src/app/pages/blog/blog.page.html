@@ -1,12 +1,41 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>blog</ion-title>
-  </ion-toolbar>
+  <ion-grid class="blog-head">
+    <ion-row>
+      <ion-col class="banner-logo-container">
+        <img
+          src="../../../assets/images/logo/logo-white.png"
+          class="banner-logo"
+        />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="banner-title-container">
+        <ion-title style="font-size: 1em">Blog</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-header>
-
 <ion-content>
-
+  <ion-grid style="margin-left: 10px; margin-bottom: 80px">
+    <ion-row>
+      <ion-col size="12">
+        <ion-card *ngFor="let content of blogs">
+          <div
+            class="blog-card card"
+            style="
+            background-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.6)
+              ),
+              url({{content.background}});
+          "
+            (click)="cardClick(content.url)"
+          >
+            <p class="title">{{content.title}}</p>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

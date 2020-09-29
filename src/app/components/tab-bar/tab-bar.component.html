@@ -1,26 +1,36 @@
-<ion-tabs>  
-
+<ion-tabs>
   <ion-fab vertical="bottom" horizontal="center" translucent="true">
     <ion-fab-button (click)="openChatBot()">
       <ion-icon name="chatbubbles"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  
+
   <ion-tab-bar slot="bottom" class="ion-no-border">
     <ion-tab-button tab="home">
       <ion-icon name="home"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="club" class="comments">
-      <ion-icon name="barbell-outline"></ion-icon>
-      <ion-badge *ngIf="new_message">{{new_message}}</ion-badge>
+    <ion-tab-button tab="blog" class="comments">
+      <ion-icon name="file-tray-full-outline"></ion-icon>
+      <ion-badge *ngIf="new_message">{{ new_message }}</ion-badge>
     </ion-tab-button>
 
-    <svg height="50" viewBox="1 0 98 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="" fill-rule="evenodd"></path></svg>
+    <svg
+      height="50"
+      viewBox="1 0 98 50"
+      width="100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z"
+        fill=""
+        fill-rule="evenodd"
+      ></path>
+    </svg>
 
     <ion-tab-button tab="gamification" class="notifs">
       <ion-icon name="game-controller-outline"></ion-icon>
-      <ion-badge *ngIf="new_activities">{{new_activities}}</ion-badge>
+      <ion-badge *ngIf="new_activities">{{ new_activities }}</ion-badge>
     </ion-tab-button>
 
     <ion-tab-button tab="settings">

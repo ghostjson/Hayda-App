@@ -1,0 +1,38 @@
+.blog-head {
+  height: 10vh;
+  padding: 0 !important;
+
+  .banner-logo-container {
+    background-color: var(--ion-color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-logo {
+      width: 55px;
+    }
+  }
+
+  .banner-title-container {
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--ion-color-light);
+  }
+}
+
+.blog-card {
+  width: 100%;
+  height: 15vh;
+  background-size: cover;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  .title {
+    color: white;
+    font-size: 0.9em;
+  }
+}

@@ -9,21 +9,8 @@ import { NavController } from "@ionic/angular";
 })
 export class HomePage {
   health_hub: LinkCardInterface[];
-  blogs: LinkCardInterface[];
 
   constructor(private navCtrl: NavController) {
-    // this.blogs = [
-    //   {
-    //     background: "../../../assets/images/placeholders/blog_mock_image.jpg",
-    //     title: "BlogTitle 1",
-    //     url: "#",
-    //   },
-    //   {
-    //     background: "../../../assets/images/placeholders/blog_mock_image2.jpg",
-    //     title: "BlogTitle 3",
-    //     url: "#",
-    //   },
-    // ];
     this.health_hub = [
       {
         background: "../../../assets/images/placeholders/health_sugar.jpg",
@@ -71,9 +58,5 @@ export class HomePage {
 
   async goToWorkout() {
     await this.navCtrl.navigateForward("workout");
-  }
-
-  async goToBlog() {
-    await this.navCtrl.navigateForward("blog");
   }
 }
