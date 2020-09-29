@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { LinkCardInterface } from "../../components/link-card/link-card.interface";
-import { NavController } from "@ionic/angular";
+import { NavController, IonReorderGroup } from "@ionic/angular";
+import { ItemReorderEventDetail } from "@ionic/core";
 
 @Component({
   selector: "app-home",
@@ -9,6 +10,7 @@ import { NavController } from "@ionic/angular";
 })
 export class HomePage {
   health_hub: LinkCardInterface[];
+  @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
   constructor(private navCtrl: NavController) {
     this.health_hub = [
@@ -58,5 +60,9 @@ export class HomePage {
 
   async goToWorkout() {
     await this.navCtrl.navigateForward("workout");
+  }
+
+  doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
+    this.health_hub = ev.detail.complete(this.health_hub);
   }
 }

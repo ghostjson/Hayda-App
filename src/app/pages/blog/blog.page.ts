@@ -30,4 +30,8 @@ export class BlogPage implements OnInit {
       },
     ];
   }
+
+  cardClick(url: string): void {
+    window.open(url, "_system", "location=yes");
+  }
 }

@@ -27,7 +27,11 @@
         <ion-card class="healthhub-section">
           <ion-list lines="none">
             <ion-list-header>Health Hub</ion-list-header>
-            <ion-reorder-group id="healthhub-reorder" disabled="false">
+            <ion-reorder-group
+              (ionItemReorder)="doReorder($event)"
+              id="healthhub-reorder"
+              disabled="false"
+            >
               <ion-item
                 *ngFor="let content of health_hub;"
                 id="health-hub-item"
