@@ -8,13 +8,48 @@
         />
       </ion-col>
     </ion-row>
-    <!-- <ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card id="how-hayda-works">
+          <div class="how-hayda-works-section">
+            <h2>Welcome to HAYDA</h2>
+            <a href="#">Learn how HAYDA works</a>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="landing-content">
+    <ion-row>
+      <ion-col>
+        <ion-card class="healthhub-section">
+          <ion-list lines="none">
+            <ion-list-header>Health Hub</ion-list-header>
+            <ion-reorder-group id="healthhub-reorder" disabled="false">
+              <ion-item
+                *ngFor="let content of health_hub;"
+                id="health-hub-item"
+              >
+                <ion-label>
+                  <a href="{{content.url}}">{{ content.title }}</a>
+                </ion-label>
+                <ion-reorder slot="end"></ion-reorder>
+              </ion-item>
+            </ion-reorder-group>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
       <ion-col>
         <ion-card (click)="goToWorkout()">
           <div class="workout-section">
             <div>
-              <h2 style="margin: 0">Today's</h2>
-              <h3 style="margin: 0">Workout</h3>
+              <h2 style="margin: 0">Set Your</h2>
+              <h3 style="margin: 0">Goals</h3>
             </div>
             <div>
               <img
@@ -25,7 +60,7 @@
           </div>
         </ion-card>
       </ion-col>
-    </ion-row> -->
+    </ion-row>
   </ion-grid>
 
   <!-- <ion-grid>
