@@ -1,5 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { LinkCardInterface } from "../../components/link-card/link-card.interface";
+import { RedirectConfirmInterface } from "../../components/redirect-confirm/redirect-confirm.interface";
 import { NavController, IonReorderGroup } from "@ionic/angular";
 import { ItemReorderEventDetail } from "@ionic/core";
 
@@ -9,7 +10,7 @@ import { ItemReorderEventDetail } from "@ionic/core";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  health_hub: LinkCardInterface[];
+  health_hub: RedirectConfirmInterface[];
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
   constructor(private navCtrl: NavController) {

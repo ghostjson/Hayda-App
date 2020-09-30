@@ -32,12 +32,10 @@
               id="healthhub-reorder"
               disabled="false"
             >
-              <ion-item
-                *ngFor="let content of health_hub;"
-                id="health-hub-item"
-              >
+              <ion-item *ngFor="let content of health_hub" id="health-hub-item">
                 <ion-label>
-                  <a href="{{content.url}}">{{ content.title }}</a>
+                  <app-redirect-confirm [content]="content">
+                  </app-redirect-confirm>
                 </ion-label>
                 <ion-reorder slot="end"></ion-reorder>
               </ion-item>
