@@ -1,4 +1,15 @@
-<ion-header> </ion-header>
+<ion-header class="ion-no-border">
+  <ion-grid class="login-head">
+    <ion-row>
+      <ion-col class="banner-logo-container">
+        <img
+          src="../../../assets/images/logo/logo-white.png"
+          class="banner-logo"
+        />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
 
 <ion-content>
   <ion-grid class="container">
@@ -41,6 +52,15 @@
     </ion-row>
     <ion-row>
       <ion-col>
+        <p class="agreement">
+          By signing, in you agree to our <br />
+          <a>terms & conditions</a> and
+          <a>privacy statement</a>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
         <p class="or">or</p>
       </ion-col>
     </ion-row>
@@ -52,7 +72,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="text-center">
+      <ion-col class="agreement">
         Don't have an account? <a [routerLink]="['/register']">register</a>
       </ion-col>
     </ion-row>
