@@ -11,6 +11,13 @@
       width: 55px;
     }
   }
+
+  .banner-title-container {
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--ion-color-light);
+  }
 }
 
 .mainmenu {

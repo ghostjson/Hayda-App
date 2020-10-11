@@ -5,7 +5,6 @@ import {
   IonReorderGroup,
 } from "@ionic/angular";
 import { ItemReorderEventDetail } from "@ionic/core";
-import { MenuCardInterface } from "./../../components/menu-card/menu-card.interface";
 import { Router } from "@angular/router";
 @Component({
   selector: "app-home",
@@ -13,22 +12,12 @@ import { Router } from "@angular/router";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  main_menu: MenuCardInterface[];
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
   constructor(
-    private navCtrl: NavController,
     private actionSheetController: ActionSheetController,
     private router: Router
-  ) {
-    this.main_menu = [
-      {
-        title: "Health Hub",
-        url: "",
-        children: [],
-      },
-    ];
-  }
+  ) {}
 
   async presentHealthHub() {
     const actionSheet = await this.actionSheetController.create({
@@ -313,10 +302,10 @@ export class HomePage {
   }
 
   doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
-    this.main_menu = ev.detail.complete(this.main_menu);
+    ev.detail.complete();
   }
 
   openChatBot() {
-    this.router.navigate(["/main/chatbot"]);
+    this.router.navigate(["main/chatbot"]);
   }
 }

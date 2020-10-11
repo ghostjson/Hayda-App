@@ -17,5 +17,63 @@
 </ion-header>
 
 <ion-content>
-  <h3>Tips, Blogs, Podcasts and Videos</h3>
+  <ion-grid class="landing-content">
+    <ion-row>
+      <ion-col>
+        <ion-list lines="none">
+          <ion-reorder-group
+            (ionItemReorder)="doReorder($event)"
+            id="mainmenu-reorder"
+            disabled="false"
+            class="mainmenu"
+          >
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="openBlog()"> Blogs </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a> Health Tips </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a> Podcasts </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a> Playtime </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a> Videos </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+          </ion-reorder-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
