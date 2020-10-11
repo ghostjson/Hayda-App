@@ -1,100 +1,31 @@
 .landing-head {
-  background-color: var(--ion-color-primary);
-  height: 25vh;
-  // border-bottom-left-radius: 20px;
-  // border-bottom-right-radius: 20px;
-  margin-bottom: 13vh;
+  height: 10vh;
+  padding: 0 !important;
 
-  .landing-logo-container {
+  .banner-logo-container {
+    background-color: var(--ion-color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
-    .landing-logo {
-      width: 150px;
-    }
-  }
-
-  .how-hayda-works-section {
-    height: 17vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4vw;
-    align-items: center;
-
-    h2 {
-      color: var(--ion-color-secondary);
-      font-weight: bold;
+    .banner-logo {
+      width: 55px;
     }
   }
 }
 
-.landing-content {
-  height: auto;
-  margin-bottom: 10vh;
-
-  .healthhub-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 4vw;
-    // align-items: center;
-    margin-bottom: 0;
-
-    a {
-      text-decoration: none;
+.mainmenu {
+  #mainmenu-item {
+    ion-card {
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+      div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
-  }
-
-  .workout-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 4vw;
-    padding-left: 8vw;
-    align-items: center;
-    margin-top: 0;
-
-    .workout-image {
-      width: 150px;
-    }
-  }
-}
-
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-.blog-heading {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-
-  h3,
-  a {
-    margin: 0px;
-    padding: 0px;
   }
 }

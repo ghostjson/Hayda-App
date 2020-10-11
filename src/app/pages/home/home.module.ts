@@ -7,10 +7,16 @@ import { HomePage } from "./home.page";
 import { HomePageRoutingModule } from "./home-routing.module";
 import { LinkCardComponent } from "../../components/link-card/link-card.component";
 import { RedirectConfirmComponent } from "../../components/redirect-confirm/redirect-confirm.component";
+import { MenuCardComponent } from "./../../components/menu-card/menu-card.component";
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
   exports: [],
-  declarations: [HomePage, LinkCardComponent, RedirectConfirmComponent],
+  declarations: [
+    HomePage,
+    LinkCardComponent,
+    RedirectConfirmComponent,
+    MenuCardComponent,
+  ],
 })
 export class HomePageModule {}

@@ -60,8 +60,12 @@ form {
 .agreement {
   text-align: center;
   color: #666666;
-  font-style: bold;
+  color: var(--ion-color-secondary);
   font-size: 0.75em;
+  font-weight: 600;
+  a {
+    font-weight: 800;
+  }
 }
 
 .or {

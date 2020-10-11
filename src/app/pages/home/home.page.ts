@@ -1,69 +1,322 @@
 import { Component, ViewChild } from "@angular/core";
-import { LinkCardInterface } from "../../components/link-card/link-card.interface";
-import { RedirectConfirmInterface } from "../../components/redirect-confirm/redirect-confirm.interface";
-import { NavController, IonReorderGroup } from "@ionic/angular";
+import {
+  NavController,
+  ActionSheetController,
+  IonReorderGroup,
+} from "@ionic/angular";
 import { ItemReorderEventDetail } from "@ionic/core";
-
+import { MenuCardInterface } from "./../../components/menu-card/menu-card.interface";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-home",
   templateUrl: "home.page.html",
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  health_hub: RedirectConfirmInterface[];
+  main_menu: MenuCardInterface[];
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
-  constructor(private navCtrl: NavController) {
-    this.health_hub = [
+  constructor(
+    private navCtrl: NavController,
+    private actionSheetController: ActionSheetController,
+    private router: Router
+  ) {
+    this.main_menu = [
       {
-        background: "../../../assets/images/placeholders/health_sugar.jpg",
-        title: "Know your sugar",
-        url: "https://www.diabetes.org/diabetes-risk/prediabetes",
-      },
-      {
-        background: "../../../assets/images/placeholders/health-fitness.jpg",
-        title: "Fitness tools",
-        url: "https://www.myfitnesspal.com/",
-      },
-      {
-        background: "../../../assets/images/placeholders/health-insurance.png",
-        title: "Insure Your Health",
-        url: "https://www.healthcare.gov/get-coverage/",
-      },
-      {
-        background: "../../../assets/images/placeholders/stroke.png",
-        title: "Stroke Video",
-        url:
-          "https://www.youtube.com/watch?v=POlmGdHD0Us&ab_channel=NationalStrokeAssociation",
-      },
-      {
-        background: "../../../assets/images/placeholders/heart.png",
-        title: "Heart Health",
-        url: "https://www.heart.org/en/healthy-living",
-      },
-      {
-        background: "../../../assets/images/placeholders/health-insurance.png",
-        title: "Insure Your Health",
-        url: "https://www.healthcare.gov/get-coverage/",
-      },
-      {
-        background: "../../../assets/images/placeholders/mindfulness.png",
-        title: "Mindfulness",
-        url: "https://www.helpguide.org/harvard/benefits-of-mindfulness.htm",
-      },
-      {
-        background: "../../../assets/images/placeholders/mint.jpg",
-        title: "Mint App",
-        url: "https://www.helpguide.org/harvard/benefits-of-mindfulness.htm",
+        title: "Health Hub",
+        url: "",
+        children: [],
       },
     ];
   }
 
-  async goToWorkout() {
-    await this.navCtrl.navigateForward("workout");
+  async presentHealthHub() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Health Hub",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Body Health",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Brain Health",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Heart Health",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Insure Health",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Mindfullness",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Wealth Health",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentInTheKnow() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "In The Know",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Blogs",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Health TIips",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Podcasts",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Playtime",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Videos",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentPremiumServices() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Premium Services",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Premium",
+          handler: () => {
+            this.presentPremium();
+          },
+        },
+        {
+          text: "Premium Plus",
+          handler: () => {
+            this.presentPremiumPlus();
+          },
+        },
+        {
+          text: "Shop",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentPremium() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Premium",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Chatbot coaching",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentPremiumPlus() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Premium Plus",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Live coaching",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentSetYourGoals() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Set Your Goals",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Weight",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Fitness",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Rewards",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentHowHaydaWorks() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "How HAYDA Works",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "HAYDA Process",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Search",
+          handler: () => {
+            this.presentHowHaydaWorksSearch();
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  async presentHowHaydaWorksSearch() {
+    const actionSheet = await this.actionSheetController.create({
+      header: "Search",
+      cssClass: "my-custom-class",
+      buttons: [
+        {
+          text: "Topic",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Category",
+          handler: () => {
+            console.log("Delete clicked");
+          },
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          },
+        },
+      ],
+    });
+
+    await actionSheet.present();
   }
 
   doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
-    this.health_hub = ev.detail.complete(this.health_hub);
+    this.main_menu = ev.detail.complete(this.main_menu);
+  }
+
+  openChatBot() {
+    this.router.navigate(["/main/chatbot"]);
   }
 }

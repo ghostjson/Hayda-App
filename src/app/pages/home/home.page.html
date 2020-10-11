@@ -1,60 +1,82 @@
-<ion-content [fullscreen]="true">
+<ion-header class="ion-no-border">
   <ion-grid class="landing-head">
-    <ion-row style="height: 80%">
-      <ion-col class="landing-logo-container">
+    <ion-row>
+      <ion-col class="banner-logo-container">
         <img
-          src="./../../../assets/images/logo/logo-white.png"
-          class="landing-logo"
+          src="../../../assets/images/logo/logo-white.png"
+          class="banner-logo"
         />
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card id="how-hayda-works">
-          <div class="how-hayda-works-section">
-            <h2>Welcome to HAYDA</h2>
-            <a href="#">Learn how HAYDA works</a>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
   </ion-grid>
+</ion-header>
 
+<ion-content>
   <ion-grid class="landing-content">
     <ion-row>
       <ion-col>
-        <ion-card class="healthhub-section">
-          <ion-list lines="none">
-            <ion-list-header>Health Hub</ion-list-header>
-            <ion-reorder-group
-              (ionItemReorder)="doReorder($event)"
-              id="healthhub-reorder"
-              disabled="false"
-            >
-              <ion-item *ngFor="let content of health_hub" id="health-hub-item">
-                <ion-label>
-                  <app-redirect-confirm [content]="content">
-                  </app-redirect-confirm>
-                </ion-label>
-                <ion-reorder slot="end"></ion-reorder>
-              </ion-item>
-            </ion-reorder-group>
-          </ion-list>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+        <ion-list lines="none">
+          <ion-reorder-group
+            (ionItemReorder)="doReorder($event)"
+            id="mainmenu-reorder"
+            disabled="false"
+            class="mainmenu"
+          >
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="presentHealthHub()"> Health Hub </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
 
-    <ion-row>
-      <ion-col>
-        <ion-card (click)="goToWorkout()">
-          <div class="workout-section">
-            <div>
-              <h2 style="margin: 0">Set Your</h2>
-              <h3 style="margin: 0">Goals</h3>
-            </div>
-          </div>
-        </ion-card>
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="presentInTheKnow()"> In The Know </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="openChatBot()"> Chat With HAYDA </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="presentPremiumServices()"> Premium Services </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="presentSetYourGoals()"> Set Your Goals </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+
+            <ion-item id="mainmenu-item">
+              <ion-card>
+                <div>
+                  <a (click)="presentHowHaydaWorks()"> How HAYDA Works </a>
+                  <ion-reorder slot="end"></ion-reorder>
+                </div>
+              </ion-card>
+            </ion-item>
+          </ion-reorder-group>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
